@@ -1,4 +1,4 @@
-# [Név]
+# [Tamás Levente]
 
 ## Hogyan kezdj neki?
 
