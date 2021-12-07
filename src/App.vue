@@ -1,7 +1,17 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <table>
+      <tr>
+        <th>Termék</th>
+        <th>Ár</th>
+        <th>Mennyiség</th>
+      </tr>
+      <tr v-for="App in rows">
+
+      </tr>
+    </table>
+    
+    <HelloWorld msg="Vegyes raktár"/>
   </div>
 </template>
 
