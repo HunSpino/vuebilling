@@ -14,7 +14,7 @@
           <td>{{ row.quantity }}</td>
           <td>
             <input type="button" v-on:click="deleteItem(row)" value="X">
-            <input type="button" value="Edit">
+            <input type="button" v-on:click="editItem(row)" value="Edit">
           </td>
       </tr>
     </table>
@@ -65,8 +65,12 @@ export default {
                     )
                     
                     
+                },
+                editItem(){
+
                 }
             }
+    
  
 }
 </script>
