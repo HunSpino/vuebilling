@@ -12,7 +12,10 @@
           <td>{{ row.title }}</td>
           <td>{{ row.price }}</td>
           <td>{{ row.quantity }}</td>
-          <td>(X)(Edit)</td>
+          <td>
+            <input type="button" v-on:click="deleteItem(row)" value="X">
+            <input type="button" value="Edit">
+          </td>
       </tr>
     </table>
   </div>
@@ -51,7 +54,20 @@ export default {
         },
       ]
     }
-  }
+  },
+   methods : {
+                deleteItem (row){
+                    this.rows = this.rows.filter(function(item)
+                    {
+                      return row.title!=item.title
+                    }
+                     
+                    )
+                    
+                    
+                }
+            }
+ 
 }
 </script>
 
@@ -70,7 +86,8 @@ table,td, th  {
 }
 table {
   border-collapse: collapse;
-  width: 60%;
+  width: 40%;
+
 }
 th, td {
   padding: 15px;
