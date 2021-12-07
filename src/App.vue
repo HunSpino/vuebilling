@@ -1,17 +1,20 @@
 <template>
   <div id="app">
+    <HelloWorld msg="Vegyes raktár"/>
     <table>
       <tr>
         <th>Termék</th>
         <th>Ár</th>
         <th>Mennyiség</th>
+        <th>Operations</th>
       </tr>
-      <tr v-for="App in rows">
-
+      <tr v-for="row in rows" :key="row">
+          <td>{{ row.title }}</td>
+          <td>{{ row.price }}</td>
+          <td>{{ row.quantity }}</td>
+          <td>(X)(Edit)</td>
       </tr>
     </table>
-    
-    <HelloWorld msg="Vegyes raktár"/>
   </div>
 </template>
 
@@ -60,5 +63,16 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+table,td, th  {  
+  border: 2px solid rgb(0, 0, 0);
+  text-align: center;
+}
+table {
+  border-collapse: collapse;
+  width: 60%;
+}
+th, td {
+  padding: 15px;
 }
 </style>
