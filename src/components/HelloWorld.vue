@@ -2,12 +2,11 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <form action="post">
-      <label for="title">Termék neve</label><br>
-      <input type="text" name="title" id="title"><br>
-      <label for="price">Ár</label><br>
-      <input type="number" name="price" id="price"><br>
-      <label for="quantity">Mennyiség</label><br>
-      <input type="number" name="quantity" id="quantity"><br>
+      <label for="title">Termék neve</label><label for="price">Ár</label><label for="quantity">Mennyiség</label>
+      <br>
+      <input type="text" name="title" id="title">
+      <input type="number" name="price" id="price">
+      <input type="number" name="quantity" id="quantity">
       <input type="submit" value="Beküldés">
     </form>
     
@@ -22,6 +21,7 @@ export default {
     msg: String
   }
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
